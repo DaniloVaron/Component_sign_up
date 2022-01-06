@@ -1,0 +1,38 @@
+:root {
+  /* Primario */
+
+  --Rojo: hsl(0, 100%, 74%);
+  --Verde: hsl(154, 59%, 51%);
+
+  /* Acento */
+
+  --Azul: hsl(248, 32%, 49%);
+
+  /* Neutral */
+
+  --Azul_oscuro: hsl(249, 10%, 26%);
+  --Azul_grisáceo: hsl(246, 25%, 77%);
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 16px;
+
+  font-family: "Poppins", sans-serif;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
