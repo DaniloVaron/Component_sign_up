@@ -51,11 +51,30 @@
       <div class="card">
         <!-- Formulario -->
         <form action="#" id="form" class="formulario">
-          <input type="text" placeholder="First Name">
-          <input type="text" placeholder="Last Name">
-          <input type="email" placeholder="Email Address">
-          <input type="password" placeholder="Password">
-          <button>Claim your free trial</button>
+          <div class="entrada">
+            <input type="text" id="first_name" name="first_name" placeholder="First Name">
+            <img src="./images/icon-error.svg" alt="icon-error" class="icono_error">
+            <p class="texto_error">First Name cannot be empty</p>
+          </div>
+
+          <div class="entrada">
+            <input type="text" id="last_name" name="last_name" placeholder="Last Name">
+            <img src="./images/icon-error.svg" alt="icon-error" class="icono_error">
+            <p class="texto_error">Last Name cannot be empty</p>
+          </div>
+
+          <div class="entrada">
+            <input type="email" id="email" name="email" placeholder="Email Address">
+            <img src="./images/icon-error.svg" alt="icon-error" class="icono_error">
+            <p class="texto_error">Looks like this is not an email</p>
+          </div>
+
+          <div class="entrada">
+            <input type="password" id="password" name="password" placeholder="Password">
+            <img src="./images/icon-error.svg" alt="icon-error" class="icono_error">
+            <p class="texto_error">Password cannot be empty</p>
+          </div>
+          <button type="submit">Claim your free trial</button>
         </form>
 
         <!-- Terminos y Condiciones -->
@@ -70,6 +89,8 @@
     Desafío por <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Codificado por <a href="https://github.com/DaniloVaron" target="_blank">Danilo Varon</a>.
   </footer>
+
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

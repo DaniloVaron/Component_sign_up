@@ -4,7 +4,8 @@
   --Rojo: hsl(0, 100%, 74%);
   --Verde: hsl(154, 59%, 51%);
 
-  --Verde_hover: hsl(154, 59%, 45%);
+  --Verde_sombra: hsl(154, 59%, 45%);
+  --Verde_hover: hsl(154, 59%, 60%);
 
   /* Acento */
 
@@ -17,6 +18,20 @@
 
   --Azul_grisaceo_claro: hsl(246, 25%, 90%);
   --Azul_oscuro_hover: hsla(249, 10%, 26%, 0.25);
+}
+
+.icono_error,
+.texto_error {
+  display: none;
+}
+
+.entrada.error .icono_error,
+.entrada.error .texto_error {
+  display: block;
+}
+
+.entrada.error input {
+  border: 2px solid var(--Rojo);
 }
 
 html {
@@ -40,11 +55,6 @@ body {
   background-image: url(../images/bg-intro-desktop.png);
   background-repeat: no-repeat;
   background-color: var(--Rojo);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 
   color: white;
 }
@@ -52,17 +62,14 @@ body {
 /* Contenedor */
 .container {
   width: 70%;
-  height: 500px;
-  /* background-color: #fff; */
   display: flex;
+  margin: 30px 0;
 }
 
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
-    height: auto;
     align-items: center;
-    margin: 30px 0;
   }
 }
 
@@ -74,6 +81,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-right: 70px;
+  flex: 1;
 }
 
 @media (max-width: 768px) {
@@ -120,6 +128,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex: 1;
 }
 
 @media (max-width: 768px) {
@@ -154,9 +163,8 @@ body {
 /* Carta*/
 .card {
   background: white;
-  padding: 0 40px;
+  padding: 20px 40px;
   border-radius: 10px;
-  height: 375px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -165,7 +173,7 @@ body {
 
 @media (max-width: 768px) {
   .card {
-    padding: 0 20px;
+    padding: 20px 20px;
   }
 }
 
@@ -175,11 +183,18 @@ body {
   flex-direction: column;
 }
 
+/* Contenedores de los inputs */
+.entrada {
+  position: relative;
+}
+
 /* inputs del formulario */
 .formulario input {
   padding: 0 25px;
   height: 45px;
-  margin: 8px 0;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 6px;
   font-size: 0.8em;
   border-radius: 5px;
   border: 1px solid var(--Azul_grisaceo);
@@ -200,18 +215,21 @@ body {
 /* Boton del formulario */
 .formulario button {
   height: 45px;
-  margin: 8px 0;
+  margin: 10px 0;
   border-radius: 5px;
   font-size: 0.8em;
   background: var(--Verde);
   color: white;
   text-transform: uppercase;
-  box-shadow: 0px 3px 0px var(--Verde_hover);
+  box-shadow: 0px 3px 0px var(--Verde_sombra);
   border: 0;
   cursor: pointer;
   font-weight: 600;
 }
 
+.formulario button:hover {
+  background: var(--Verde_hover);
+}
 /* Terminos y condiciones */
 .terminos {
   margin-top: 5px;
@@ -229,7 +247,24 @@ body {
 
 .terminos_scan {
   color: var(--Rojo);
-  /* font-weight: bold; */
+}
+
+/* Iconos de error */
+.icono_error {
+  position: absolute;
+  top: 30%;
+  right: 20px;
+}
+
+/* Texto de error */
+.texto_error {
+  text-align: right;
+  font-size: 0.6em;
+  font-style: italic;
+  color: var(--Rojo);
+  margin: 0;
+  margin-bottom: 7px;
+  font-weight: 600;
 }
 
 /* Otro */
