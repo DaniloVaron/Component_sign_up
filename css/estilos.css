@@ -15,6 +15,7 @@
   --Azul_oscuro: hsl(249, 10%, 26%);
   --Azul_grisaceo: hsl(246, 25%, 77%);
 
+  --Azul_grisaceo_claro: hsl(246, 25%, 90%);
   --Azul_oscuro_hover: hsla(249, 10%, 26%, 0.25);
 }
 
@@ -56,6 +57,15 @@ body {
   display: flex;
 }
 
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    margin: 30px 0;
+  }
+}
+
 /* Información */
 .informacion {
   width: 80%;
@@ -66,6 +76,14 @@ body {
   margin-right: 70px;
 }
 
+@media (max-width: 768px) {
+  .informacion {
+    text-align: center;
+    margin: 0;
+    width: 100%;
+  }
+}
+
 /* Titulo */
 .title {
   font-weight: 700;
@@ -74,12 +92,25 @@ body {
   margin: 0;
 }
 
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5em;
+  }
+}
+
 /* Texto principal */
 .text {
   font-weight: 500;
   font-size: 0.8em;
   margin: 20px 0;
   line-height: 1.5;
+  color: var(--Azul_grisaceo_claro);
+}
+
+@media (max-width: 768px) {
+  .text {
+    margin-bottom: 40px;
+  }
 }
 
 /* Registro */
@@ -91,6 +122,12 @@ body {
   justify-content: center;
 }
 
+@media (max-width: 768px) {
+  .sign {
+    width: 100%;
+  }
+}
+
 /* Oferta */
 .oferta {
   background: var(--Azul);
@@ -100,6 +137,13 @@ body {
   font-size: 0.8em;
   box-shadow: 0px 6px 0px 0px var(--Azul_oscuro_hover);
   font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .oferta {
+    padding: 15px 35px;
+    line-height: 1.8;
+  }
 }
 
 /* Texto de la oferta */
@@ -119,11 +163,16 @@ body {
   box-shadow: 0px 6px 0px 0px var(--Azul_oscuro_hover);
 }
 
+@media (max-width: 768px) {
+  .card {
+    padding: 0 20px;
+  }
+}
+
 /* Formulario */
 .formulario {
   display: flex;
   flex-direction: column;
-  /* margin-bottom: 10px; */
 }
 
 /* inputs del formulario */
@@ -137,7 +186,14 @@ body {
   font-weight: 600;
 }
 
+@media (max-width: 768px) {
+  .formulario input {
+    padding: 0px 15px;
+  }
+}
+
 .formulario input:focus {
+  outline: none;
   border: 1.5px solid var(--Azul_oscuro);
 }
 
@@ -160,12 +216,15 @@ body {
 .terminos {
   margin-top: 5px;
   font-size: 0.5em;
-  color: var(--Azul_grisaceo);
+  color: var(--Azul_grisaceo_claro);
   font-weight: 700;
 }
 
-.formulario input:focus {
-  outline: none;
+@media (max-width: 768px) {
+  .terminos {
+    padding: 0 20px;
+    line-height: 2;
+  }
 }
 
 .terminos_scan {
